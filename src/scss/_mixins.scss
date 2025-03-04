@@ -1,0 +1,85 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint ==tablet {
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==desktop {
+
+        @media (min-width: 1024px) and (max-width: 1440px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint ==large-desktop {
+
+        @media (min-width: 1440px) {
+            @content;
+        }
+    }
+}
+
+@mixin flexSb {
+    display: flex;
+    justify-content: space-between
+}
+
+@mixin border {
+    border-top: 2px black dotted;
+    border-bottom: 2px black dotted;
+}
+
+@mixin flexSa {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin widthAuto ($width) {
+    width: $width;
+    margin: auto;
+}
+
+@mixin widthMax ($width) {
+    max-width: $width;
+    flex-wrap: wrap;
+}
+
+@mixin responsive-text($font-size) {
+    font-size: $font-size;
+    width: auto;
+    max-height: max-content;
+}
+
+@mixin basketStyle ($font-size) {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0;
+
+    p {
+        font-size: $font-size
+    }
+}
+
+@mixin menuH3 {
+    height: 50px;
+    margin-top: 5px;
+}
+
+@mixin menuItem ($width, $margin) {
+    width: $width;
+    margin: $margin;
+}

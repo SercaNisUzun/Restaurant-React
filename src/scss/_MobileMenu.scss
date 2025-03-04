@@ -1,0 +1,25 @@
+@import 'mixins', 'variables';
+
+.mobileMenu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: $bgColor;
+    border-bottom: 1px solid black;
+    z-index: 1;
+
+
+    button {
+        background-color: $bgColor;
+        border: none;
+        font-size: 30px;
+        @include flexCenter;
+        margin: auto;
+        margin-bottom: 5px;
+
+    }
+
+    .icons {
+        margin-right: 5px;
+    }
+}

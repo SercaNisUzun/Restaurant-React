@@ -1,0 +1,43 @@
+@import 'mixins', 'variables';
+
+.header {
+    @include flexSb;
+    align-items: center;
+    background-color: $bgColor;
+    padding: 10px 20px;
+
+    img {
+        max-height: 75px;
+
+
+        @include respond-to(tablet) {
+            max-height: 100px;
+        }
+
+        @include respond-to(desktop) {
+            max-height: 130px;
+        }
+
+        @include respond-to(large-desktop) {
+            max-height: 150px;
+        }
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menuIcon {
+        font-size: 35px;
+        display: flex;
+        align-items: center;
+
+        @include respond-to(desktop) {
+            font-size: 50px
+        }
+
+        #mobileMenu {
+            margin-left: 20px;
+        }
+    }
+}

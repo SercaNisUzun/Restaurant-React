@@ -1,0 +1,13 @@
+@import 'mixins', 'variables';
+
+body {
+    @include reset;
+    background-color: $bgColor;
+    width: 95%;
+    margin: auto;
+
+}
+
+button:hover {
+    background-color: rgb(12, 75, 12);
+}

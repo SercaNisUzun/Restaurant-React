@@ -1,0 +1,159 @@
+@import 'mixins', 'variables';
+
+.basketCard {
+
+    @include flexSa;
+    max-width: 250px;
+    margin: 5px 5px 10px 5px;
+    border-radius: 10px;
+
+    @include respond-to(tablet) {
+        @include widthMax(400px)
+    }
+
+    @include respond-to(desktop) {
+        @include widthMax(600px)
+    }
+
+    @include respond-to(large-desktop) {
+        @include widthMax(600px)
+    }
+
+    img {
+        width: 48%;
+        height: fit-content;
+        border-radius: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0;
+        text-align: center;
+        overflow: hidden;
+
+        @include respond-to(tablet) {
+            @include responsive-text(20px);
+        }
+
+        @include respond-to(desktop) {
+            @include responsive-text(25px);
+        }
+
+        @include respond-to(large-desktop) {
+            @include responsive-text(25px);
+        }
+    }
+
+    .count {
+        @include flexSa;
+        align-items: center;
+        font-size: 20px;
+
+        @include respond-to(tablet) {
+            margin: 0 auto;
+        }
+
+    }
+
+    .price {
+        @include flexSa;
+        align-items: center;
+        background-color: whitesmoke;
+        border-radius: 10px;
+
+        @include respond-to(tablet) {
+            font-size: 40px !important;
+        }
+    }
+
+    .basketInfo {
+        @include flexSb;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 48%;
+
+        &>p {
+            font-size: 12px;
+            text-align: left;
+        }
+
+        @include respond-to(tablet) {
+            @include basketStyle(18px)
+        }
+
+        @include respond-to(desktop) {
+            @include basketStyle(25px)
+        }
+
+        @include respond-to(large-desktop) {
+            @include basketStyle(25px)
+        }
+
+        .basketIcon {
+            font-size: 25px;
+
+            @include respond-to(tablet) {
+                font-size: 40px;
+            }
+
+            @include respond-to(desktop) {
+                font-size: 45px;
+            }
+
+            @include respond-to(large-desktop) {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+.basketHeader {
+    text-align: center;
+    text-decoration: underline;
+
+    @include respond-to(tablet) {
+        font-size: 43px;
+    }
+
+    @include respond-to(desktop) {
+        font-size: 50px;
+    }
+
+    @include respond-to(large-desktop) {
+        font-size: 50px;
+    }
+}
+
+hr {
+    border: 1px solid $bgColor;
+    width: 100%;
+}
+
+.basketButton {
+    width: 200px;
+    margin: 20px auto;
+    border: none;
+    background-color: $bgColor;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 5px;
+
+    @include respond-to(tablet) {
+        font-size: 30px;
+    }
+
+    @include respond-to(desktop) {
+        font-size: 30px;
+    }
+
+    @include respond-to(large-desktop) {
+        font-size: 30px;
+    }
+
+}
+
+.mainContent {
+    min-height: 90vh;
+}

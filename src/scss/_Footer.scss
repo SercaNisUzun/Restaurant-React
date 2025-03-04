@@ -1,0 +1,25 @@
+@import 'mixins', 'variables';
+
+.footer {
+    @include flexSb;
+    align-items: center;
+    margin: 10px 0;
+    width: 90%;
+    margin: auto;
+
+
+    .footerAlign {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+h3 {
+    text-align: center;
+}
+
+hr {
+    border: 1px solid black;
+    margin: 20px 0;
+}

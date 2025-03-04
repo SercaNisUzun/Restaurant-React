@@ -1,0 +1,68 @@
+@import 'mixins', 'variables';
+
+.addition {
+    background-color: white;
+    padding: 10px;
+
+    @include respond-to(tablet) {
+        @include widthAuto(50%)
+    }
+
+    @include respond-to(desktop) {
+        @include widthAuto(30%)
+    }
+
+    @include respond-to(large-desktop) {
+        @include widthAuto(30%)
+    }
+
+    h1 {
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgb(53, 52, 52);
+
+        &+p {
+            text-align: center;
+        }
+
+    }
+
+    .date {
+        @include border;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .price {
+        @include border;
+        text-align: center;
+
+        & :nth-child(3) {
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+
+
+    &:last-child {
+        text-align: center;
+    }
+
+
+}
+
+.bill {
+    @include flexSb;
+    align-items: center;
+
+    .billInfo {
+        width: 80%;
+        text-align: left;
+    }
+
+    .billPrice {
+        text-align: right;
+    }
+}
