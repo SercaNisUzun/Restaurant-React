@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/SercaNisUzun/Restaurant-React",
+  "homepage": "https://SercaNisUzun.github.io/Restaurant-React",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
